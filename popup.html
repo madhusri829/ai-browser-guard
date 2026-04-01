@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Browser Guard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <img src="icons/icon48.png" class="logo" alt="AI Guard">
+    <h2>🎯 AI Browser Guard</h2>
+    <div class="status online">🟢 LIVE</div>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">🛡️</div>
+      <div class="stat-value" id="adsBlocked">0</div>
+      <div class="stat-label">Ads Blocked</div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-icon">⚠️</div>
+      <div class="stat-value" id="linksBlocked">0</div>
+      <div class="stat-label">Links Blocked</div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-icon">📚</div>
+      <div class="stat-value" id="mostUsed">--</div>
+      <div class="stat-label">Most Used</div>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="section">
+    <h3>📊 Recent Activity</h3>
+    <ul id="recentList">
+      <li class="loading">Scanning pages...</li>
+    </ul>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="actions">
+    <button id="clearHistory" class="btn secondary">🗑️ Clear History</button>
+    <button id="exportData" class="btn primary">📤 Export Data</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <small>Protected <span id="uptime">0</span>s | v1.0.0</small>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
