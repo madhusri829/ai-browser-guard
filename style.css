@@ -1,0 +1,180 @@
+/**
+ * 🎯 AI Browser Guard - Page Protection Styles
+ * Automatically injected into ALL websites
+ */
+
+/* 🛡️ CORE AD BLOCKING - Priority 99999 */
+.ad, .ads, .advertisement, .advert, 
+[class*="ad-"], [class*="ads-"], [id*="ad-"], [id*="ads-"],
+.banner, .banner-ad, .popup-ad, .promoted, .sponsored,
+ins.adsbygoogle,
+[data-ad], [data-adtype] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -99999 !important;
+}
+
+/* iframe ads */
+iframe[src*="googleadservices"],
+iframe[src*="doubleclick"],
+iframe[src*="ads"],
+iframe[class*="ad"] {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* 🛑 HARMFUL LINKS - Visual warnings */
+a[href*="free"][href*="reward"],
+a[href*="offer"], a[href*="click"], a[href*="win"],
+a[href^="http://"], a[href$=".tk"], a[href$=".ml"] {
+  border: 3px solid #dc2626 !important;
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+  pointer-events: none !important;
+  position: relative;
+}
+
+a[href*="free"][href*="reward"]:after,
+a[href*="offer"]:after {
+  content: "🚫 BLOCKED" !important;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #dc2626;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* 📱 MOBILE AD FIXES */
+@media (max-width: 768px) {
+  .mobile-ad, .interstitial-ad {
+    display: none !important;
+  }
+}
+
+/* 🎬 VIDEO AD OVERLAYS */
+.video-ad-overlay, .ad-overlay {
+  display: none !important;
+}
+
+/* 🔐 PRIVACY SHIELD - Fullscreen protection */
+#ai-privacy-shield {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  background: rgba(0, 20, 40, 0.95) !important;
+  backdrop-filter: blur(15px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  color: white !important;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+#ai-privacy-shield::before {
+  content: "🔐 PRIVATE MODE" !important;
+  font-size: 48px !important;
+  margin-bottom: 20px !important;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+}
+
+#ai-privacy-shield h2 {
+  font-size: 28px !important;
+  margin-bottom: 10px !important;
+  font-weight: 700 !important;
+}
+
+/* 🔔 NOTIFICATION BANNER - Top-right corner */
+.ai-guard-notification {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 100000 !important;
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: white !important;
+  padding: 16px 24px !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4) !important;
+  font-family: -apple-system, sans-serif !important;
+  max-width: 300px !important;
+  transform: translateX(400px) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  animation: slideIn 0.4s forwards !important;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0) !important;
+  }
+}
+
+.ai-guard-notification.warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  box-shadow: 0 12px 40px rgba(245, 158, 11, 0.4) !important;
+}
+
+.ai-guard-notification.danger {
+  background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* 🎨 AI GUARD STATUS INDICATOR */
+#ai-guard-status {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(16, 185, 129, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 99999;
+  backdrop-filter: blur(10px);
+}
+
+/* 🛠️ COOKIES - Tracking protection */
+*[data-cookie*="tracking"],
+*[name*="tracking"] {
+  display: none !important;
+}
+
+/* 📵 POPUP BLOCKERS */
+.popup-modal[href*="ad"],
+.modal-overlay[class*="ad"] {
+  display: none !important;
+}
+
+/* 🔄 ANTI-AD MUTATION RESISTANCE */
+* {
+  contain: layout style !important;
+}
+
+/* 🎯 HACKATHON PERFECT - Zero conflicts */
+.ai-guard-styles {
+  all: initial !important;
+  display: block !important;
+}
+
+/* RESPONSIVE & UNIVERSAL */
+@media print {
+  .ad, .ads { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
