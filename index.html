@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Browser Guard - Hackathon Winner 🚀</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', -apple-system, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #fff, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; }
+    
+    .cta-button {
+      display: inline-block;
+      background: #10b981;
+      color: white;
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      box-shadow: 0 10px 30px rgba(16,185,129,0.4);
+      transition: all 0.3s;
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(16,185,129,0.6);
+    }
+    
+    .demo-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .demo-gif {
+      max-width: 800px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      margin: 20px auto;
+    }
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.3s;
+    }
+    .feature-card:hover { transform: translateY(-10px); }
+    .feature-icon { font-size: 3rem; margin-bottom: 20px; }
+    
+    .download-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0,0,0,0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>AI Browser Guard</h1>
+      <p>Ad-free • Privacy-first • Smart organization<br>
+      <strong>Hackathon Winner 🚀</strong></p>
+      <a href="#download" class="cta-button">Install Chrome Extension →</a>
+    </section>
+    
+    <section class="demo-section">
+      <h2>Watch it Work ✨</h2>
+      <img src="demo.gif" alt="Demo" class="demo-gif">
+    </section>
+    
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🚫</div>
+        <h3>Instant Ad Removal</h3>
+        <p>Banner ads, popups, auto-jumps - GONE instantly</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Exclusive Privacy</h3>
+        <p>Blur sensitive tabs from unauthorized viewers</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>AI Organization</h3>
+        <p>Auto-categorize: Study • Hackathon • Movies</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔔</div>
+        <h3>Smart Reminders</h3>
+        <p>Usage-based notifications & scheduling</p>
+      </div>
+    </section>
+    
+    <section class="download-section" id="download">
+      <h2>Ready to Install?</h2>
+      <p><strong>Chrome: </strong><a href="extension/" style="color: #10b981;">Load Extension Folder →</a></p>
+      <p><small>chrome://extensions/ → Load unpacked → extension/ folder</small></p>
+    </section>
+  </div>
+</body>
+</html>
